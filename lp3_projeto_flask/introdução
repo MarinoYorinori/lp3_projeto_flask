@@ -1,0 +1,23 @@
+curl -sSL https://install.python-poetry.org | python3 -
+# download do poetry
+
+export PATH="/home/estudante1/.local/bin:$PATH"
+# cria path do poetry
+
+poetry --version
+
+poetry new meu_projeto
+# cria pasta com formato de projeto python
+>interpreter
+
+Select Interpreter
+Selecionar o ambiente virtual (poetry)
+# seleciona o ambiente virtual do poetry 
+
+
+poetry add Flask
+# adiciona dependência de flask na máquina virtual
+# biblioteca pra trabalhar com aplicações web
+
+flask --app meu_projeto/app.py run
+poetry run flask --app meu_projeto/app.py run
