@@ -9,8 +9,11 @@
 <body>
     <h1>Produtos</h1>
 
-    <table>
-    
+    <table border="2px">
+        <tr>
+            <th> Nome </th>
+            <th> Descrição </th>
+        </tr>
         {% for produto in produtos %}
         <tr>
             <td> {{ produto.nome }} </td>

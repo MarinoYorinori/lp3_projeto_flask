@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 
 lista_produtos = [
-    { "nome": "Coca-cola", "descrição": "veneno" },
-    { "nome": "Doritos", "descrição": "suja mão" },
-    { "nome": "Água", "descrição": "vida" },
-    { "nome": "Miasma", "descrição": "An otherwordly sword that oozes toxic gasses. The sword is said to house the strength of six men" }
+    { "nome": "Coca-cola", "descricao": "veneno" },
+    { "nome": "Doritos", "descricao": "suja mão" },
+    { "nome": "Água", "descricao": "vida" },
+    { "nome": "Miasma", "descricao": "foda" }
 ]
 
 app = Flask(__name__)
