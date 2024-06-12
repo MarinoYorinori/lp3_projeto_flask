@@ -13,21 +13,21 @@ app = Flask(__name__)
 # Quando receber um requerimento com "/", executa a seguinte função:  (basicamente o comando que o usuario executa e o que ele retorna)
 @app.route("/")
 def home():
-    return "<h1>Home</h1>"
+    return render_template("home.html")
 
 @app.route("/contato")
 def contato():
-    return "<h1>Contato</h1>"
+    return render_template("contato.html")
 
 @app.route("/produtos")
 def produtos():
     return render_template("produtos.html", produtos=lista_produtos)
-# ACESSAR PAG HTML, é necessario usar a função importada render_template 
+# PARA ACESSAR PAG HTML, é necessario usar a função importada render_template 
 # ele busca o arquivo em uma pasta de nome "templates" (precisa ser criada manualmente)
 
 @app.route("/produtos/<nome>")
 def produto(nome):
     for produto in lista_produtos:
         if produto['nome'] == nome:
-            return f"produto['nome', {produto['descricao']}]"
+            return render_template("produto.html", produto=produto)
     return 'Produto não existe!!!!!!'

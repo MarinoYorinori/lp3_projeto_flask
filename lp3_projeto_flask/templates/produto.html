@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}Produto{% endblock %}
+
+{% block content %}
+<h2> {{produto.nome}} </h2>
+<p> {{produto.descricao}} </p>
+<img src="{{ url_for('static', filename='img/'+produto.nome+'.png') }}" alt="{{produto.nome}}">
+{% endblock %}
