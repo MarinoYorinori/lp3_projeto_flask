@@ -4,6 +4,7 @@
 
 {% block content %}
 <h2> {{produto.nome}} </h2>
+<p> Preço: R${{produto.preco}} </p>
 <p> {{produto.descricao}} </p>
-<img src="{{ url_for('static', filename='img/'+produto.nome+'.png') }}" alt="{{produto.nome}}">
+<img src="{{produto.img_url}}" alt="{{produto.nome}}">
 {% endblock %}

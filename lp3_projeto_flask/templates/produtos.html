@@ -3,18 +3,26 @@
 {% block title %}Produtos{% endblock %}
 
 {% block content %}
-<br>
-<h1>Produtos</h1>
-<table border="2px">
-<tr>
-    <th> Nome </th>
-    <th> Descrição </th>
-</tr>
-{% for produto in produtos %}
-<tr>
-    <td> <a href="/produtos/{{produto.nome}}">{{ produto.nome }}</a> </td>
-    <td> {{ produto.descricao }} </td>
-</tr>    
-{% endfor %} 
-</table>
+<div>
+    <br>
+    <h1>Produtos</h1>
+    <table border="2px">
+    <tr>
+        <th> Nome </th>
+        <th> Descrição </th>
+    </tr>
+    {% for produto in produtos %}
+    <tr>
+        <td> <a href="/produtos/{{produto.nome}}">{{ produto.nome }}</a> </td>
+        <td> {{ produto.descricao }} </td>
+        <td> {{produto.preco}} </td>
+        <td> <img src='{{produto.img}}' height="500px" width="500px" alt='{{produto.nome}}'> </td>
+    </tr>    
+    {% endfor %} 
+    </table>
+</div>
+
+<div>
+    <a href="/produtos/cadastro"><button>Cadastrar produto</button></a>
+</div>
 {% endblock %}
