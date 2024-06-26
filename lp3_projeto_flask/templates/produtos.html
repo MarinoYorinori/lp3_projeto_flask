@@ -15,8 +15,8 @@
     <tr>
         <td> <a href="/produtos/{{produto.nome}}">{{ produto.nome }}</a> </td>
         <td> {{ produto.descricao }} </td>
-        <td> {{produto.preco}} </td>
-        <td> <img src='{{produto.img}}' height="500px" width="500px" alt='{{produto.nome}}'> </td>
+        <td> {{produto.valor}} </td>
+        <td> <img src='{{produto.img_url}}' height="500px" width="500px" alt='{{produto.nome}}'> </td>
     </tr>    
     {% endfor %} 
     </table>
