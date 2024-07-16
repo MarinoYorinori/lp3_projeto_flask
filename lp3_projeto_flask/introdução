@@ -2,7 +2,9 @@ curl -sSL https://install.python-poetry.org | python3 -
 # download do poetry
 
 export PATH="/home/estudante1/.local/bin:$PATH"
-# cria path do poetry
+# cria path do poetry linux
+set PATH=%PATH%;%USERPROFILE%\AppData\Roaming\pypoetry\venv\Scripts
+# windows
 
 poetry --version
 
